@@ -21,7 +21,8 @@ docker tag kaggle_base gcr.io/$gcp_project_id/kaggle_base
 docker push gcr.io/$gcp_project_id/kaggle_base
 
 ######## docker imageをとってくる(2回目以降)
-# docker pull gcr.io/{{ GCPID }}/kaggle_base
+gcp_project_id=$(gcloud config list | grep project | awk '{print $3;}')
+# docker pull gcr.io/$gcp_project_id/kaggle_base
 
 # Update pip
 pip install --upgrade pip
@@ -39,7 +40,6 @@ dpkg-reconfigure -f noninteractive tzdata # シンボリックリンク再作成
 
 
 # dataとってくる
-cd ~/moa
 kaggle competitions download -c lish-moa -p moa/data
-unzip {{ zip_data }} -d moa/data
-chmod -w easy_gold/data/*
+unzip lish-moa.zip -d moa/data
+chmod -w moa/data/*
