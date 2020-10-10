@@ -37,11 +37,17 @@ coverage.xml
 
 # exclude data from source control by default
 data/external/*
+!data/external/.gitignore
 data/figures/*
+!data/figures/.gitignore
 data/interim/*
+!data/interim/.gitignore
 data/processed/*
+!data/processed/.gitignore
 data/raw/*
+!data/raw/.gitignore
 data/sub/*
+!data/sub/.gitignore
 
 
 # Mac OS-specific storage files
