@@ -40,6 +40,7 @@ dpkg-reconfigure -f noninteractive tzdata # シンボリックリンク再作成
 
 
 # dataとってくる
-kaggle competitions download -c lish-moa -p moa/data
-unzip lish-moa.zip -d moa/data
-chmod -w moa/data/*
+raw_data_dir=Kaggle-MoA/data/raw/
+kaggle competitions download -c lish-moa -p $raw_data_dir
+unzip $raw_data_dir/* -d $raw_data_dir
+chmod -w $raw_data_dir/*
