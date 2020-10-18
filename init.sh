@@ -44,3 +44,7 @@ raw_data_dir=Kaggle-MoA/data/raw/
 kaggle competitions download -c lish-moa -p $raw_data_dir
 unzip $raw_data_dir/* -d $raw_data_dir
 chmod -w $raw_data_dir/*
+
+# extension 
+jupyter labextension install @jupyterlab/toc
+
