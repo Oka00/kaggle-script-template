@@ -45,6 +45,12 @@ kaggle competitions download -c lish-moa -p $raw_data_dir
 unzip $raw_data_dir/* -d $raw_data_dir
 chmod -w $raw_data_dir/*
 
-# extension 
-jupyter labextension install @jupyterlab/toc
 
+# localで実行
+# pip install iterative-stratification
+# ./ipython.shを起動して%run moa/9001_run.py
+# またはnohup python easy_gold/9001_run.py
+
+# kagglenotebookで実行
+# %run build.py
+# script.pyをkaggle notebookに貼り付けて実行

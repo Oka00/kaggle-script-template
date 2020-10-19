@@ -23,8 +23,6 @@ coverage.xml
 *.mo
 *.pot
 
-# Django stuff:
-*.log
 
 # Pycharm
 .idea
